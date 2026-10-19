@@ -27,24 +27,24 @@ st.markdown("""
         margin-bottom: 25px;
     }
     .kpi-card {
-        background-color: #1E293B;
         border-radius: 8px;
         padding: 15px 20px;
         flex: 1;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-left: 5px solid;
     }
+    
+    /* Fondos de las tarjetas */
+    .kpi-card.total { background-color: #1E293B; border-left: 5px solid #60A5FA; }
+    .kpi-card.propia { background-color: #3B82F6; } /* Azul de Inversión Propia */
+    .kpi-card.ecovida { background-color: #10B981; } /* Verde de EcoVida */
+    
+    /* Textos base */
     .kpi-card h4 {
-        color: #94A3B8;
         font-size: 0.9rem;
         margin-bottom: 5px;
         font-weight: 600;
         text-transform: uppercase;
     }
-    .kpi-card.total { border-color: #60A5FA; }
-    .kpi-card.propia { border-color: #3B82F6; }
-    .kpi-card.ecovida { border-color: #10B981; }
-    
     .kpi-card .usd {
         color: #FFFFFF;
         font-size: 1.8rem;
@@ -52,16 +52,24 @@ st.markdown("""
         margin: 0;
     }
     .kpi-card .bs {
-        color: #CBD5E1;
         font-size: 1.1rem;
         font-weight: 600;
         margin-top: 5px;
     }
     .kpi-card .subtext {
-        color: #64748B;
         font-size: 0.8rem;
         margin-top: 8px;
     }
+
+    /* Colores específicos de textos para la tarjeta Total (Fondo oscuro) */
+    .kpi-card.total h4 { color: #94A3B8; }
+    .kpi-card.total .bs { color: #CBD5E1; }
+    .kpi-card.total .subtext { color: #64748B; }
+
+    /* Colores específicos de textos para las tarjetas de colores (Para que resalten en fondo azul/verde) */
+    .kpi-card.propia h4, .kpi-card.ecovida h4 { color: #F8FAFC; opacity: 0.9; }
+    .kpi-card.propia .bs, .kpi-card.ecovida .bs { color: #F1F5F9; }
+    .kpi-card.propia .subtext, .kpi-card.ecovida .subtext { color: #E2E8F0; opacity: 0.85; }
 </style>
 """, unsafe_allow_html=True)
 
